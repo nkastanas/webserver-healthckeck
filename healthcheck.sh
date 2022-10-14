@@ -17,11 +17,6 @@ while getopts ':d:anervp' OPTION; do
     d)
       check_url="https://$OPTARG"
       ;;
-      #shift "$(( OPTIND - 1 ))"
-      if [ -z "$OPTARG" ]; then
-              echo 'Missing domain name' # >&2
-              exit 1
-      fi
     a)
       services httpd
       ;;
